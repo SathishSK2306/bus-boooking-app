@@ -52,7 +52,7 @@
 
 .seat-row {
   display: grid;
-  grid-template-columns: repeat(5, 45px);
+  grid-template-columns: repeat(6, 45px);
   gap: 10px;
   justify-content: center;
 }
@@ -126,7 +126,8 @@
   gap: 8px;
 }
 
-.passenger-form input {
+.passenger-form input,
+.passenger-form select {
   padding: 10px 12px;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -178,9 +179,13 @@
   margin-top: -8px;
 }
 
+.booking-end-space {
+  height: 80px;
+}
+
 @media (max-width: 768px) {
   .seat-row {
-    grid-template-columns: repeat(5, 35px);
+    grid-template-columns: repeat(6, 35px);
     gap: 8px;
   }
 

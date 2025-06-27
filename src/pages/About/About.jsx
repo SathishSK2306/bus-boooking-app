@@ -6,7 +6,7 @@ const About = () => {
     <div className="about-page">
       <section className="about-hero">
         <div className="container">
-          <h1>About BusEase</h1>
+          <h1>About YesGoBus</h1>
           <p>Your trusted partner for comfortable and affordable bus travel</p>
         </div>
       </section>
@@ -17,7 +17,7 @@ const About = () => {
             <div className="about-text">
               <h2>Our Story</h2>
               <p>
-                Founded in 2023, BusEase began with a simple mission: to make
+                Founded in 2023, YesGoBus began with a simple mission: to make
                 bus travel more accessible, comfortable, and convenient for
                 everyone. What started as a small team of travel enthusiasts has
                 grown into a leading bus ticket booking platform serving
@@ -30,7 +30,7 @@ const About = () => {
               </p>
             </div>
             <div className="about-image">
-              <img src="/images/about-bus.jpg" alt="Our buses" />
+              <img src="/public/images/bus-img.png" alt="Our buses" />
             </div>
           </div>
 
@@ -58,21 +58,21 @@ const About = () => {
             <div className="team-grid">
               <div className="team-member">
                 <div className="member-image">
-                  <img src="/images/team1.jpg" alt="Team member" />
+                  <img src="/public/images/team1.jpeg" alt="Team member" />
                 </div>
                 <h4>John Doe</h4>
                 <p>Founder & CEO</p>
               </div>
               <div className="team-member">
                 <div className="member-image">
-                  <img src="/images/team2.jpg" alt="Team member" />
+                  <img src="/public/images/team2.jpeg" alt="Team member" />
                 </div>
                 <h4>Jane Smith</h4>
-                <p>Operations Manager</p>
+                <p>Operator</p>
               </div>
               <div className="team-member">
                 <div className="member-image">
-                  <img src="/images/team3.jpg" alt="Team member" />
+                  <img src="/public/images/team3.jpeg" alt="Team member" />
                 </div>
                 <h4>Mike Johnson</h4>
                 <p>Customer Support Lead</p>

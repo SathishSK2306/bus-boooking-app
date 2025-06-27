@@ -1,16 +1,18 @@
-// src/components/SeatSelection/SeatSelection.jsx
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./SeatSelection.css";
 
 const seatLayout = [
-  ["1A", "1B", "", "1C", "1D"],
-  ["2A", "2B", "", "2C", "2D"],
-  ["3A", "3B", "", "3C", "3D"],
-  ["4A", "4B", "", "4C", "4D"],
-  ["5A", "5B", "", "5C", "5D"],
-  ["6A", "6B", "", "6C", "6D"],
-  ["7A", "7B", "", "7C", "7D"],
-  ["8A", "8B", "", "8C", "8D"],
+  ["", "", "", "", "", "Driver"],
+  [],
+  ["1A", "1B", "", "1C", "1D", "1E"],
+  ["2A", "2B", "", "2C", "2D", "2E"],
+  ["3A", "3B", "", "3C", "3D", "3E"],
+  ["4A", "4B", "", "4C", "4D", "4E"],
+  ["5A", "5B", "", "5C", "5D", "5E"],
+  ["6A", "6B", "", "6C", "6D", "6E"],
+  ["7A", "7B", "", "7C", "7D", "7E"],
+  ["8A", "8B", "", "8C", "8D", "8E"],
 ];
 
 const soldSeats = ["2B", "3C", "5D"];
@@ -23,6 +25,7 @@ const SeatSelection = ({ selectedSeats, onSeatSelect }) => {
   const [email, setEmail] = useState("");
   const [whatsapp, setWhatsapp] = useState("");
   const [showPayment, setShowPayment] = useState(false);
+  const navigate = useNavigate();
 
   const handleSelect = (seat) => {
     if (soldSeats.includes(seat)) return;
@@ -99,6 +102,17 @@ const SeatSelection = ({ selectedSeats, onSeatSelect }) => {
                 value={passengerInfo[seat]?.age || ""}
                 onChange={(e) => handleInfoChange(seat, "age", e.target.value)}
               />
+              <select
+                value={passengerInfo[seat]?.gender || ""}
+                onChange={(e) =>
+                  handleInfoChange(seat, "gender", e.target.value)
+                }
+              >
+                <option value="">Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+              </select>
             </div>
           ))}
 
@@ -137,9 +151,16 @@ const SeatSelection = ({ selectedSeats, onSeatSelect }) => {
           <p className="note">
             *Ticket copy will be sent to your Email and WhatsApp.
           </p>
-          <button className="btn-confirm">Confirm & Pay</button>
+          <button
+            className="btn-confirm"
+            onClick={() => navigate("/bustracking")}
+          >
+            Confirm & Pay
+          </button>
         </div>
       )}
+      <br />
+      <br />
     </div>
   );
 };

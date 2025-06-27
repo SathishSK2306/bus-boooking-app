@@ -1,0 +1,71 @@
+.tracking-container {
+  padding: 40px 20px;
+  text-align: center;
+  background: #f9f9f9;
+  min-height: 100vh;
+}
+
+.tracking-container h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #007f5f;
+}
+
+.route-line {
+  position: relative;
+  margin: 0 auto;
+  width: 250px;
+  border-left: 4px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  gap: 50px; /* Increased for more spacing */
+  align-items: flex-start;
+  padding-left: 30px;
+}
+
+.stop-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.stop-dot {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border: 4px solid #999;
+  border-radius: 50%;
+  position: relative;
+}
+
+.stop-dot.active {
+  border-color: #007f5f;
+  background-color: #007f5f;
+}
+
+.bus-icon {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  left: -42px;
+  top: -10px;
+  animation: bounce 0.8s infinite alternate;
+}
+
+.stop-label {
+  font-weight: 500;
+  font-size: 1.05rem;
+  color: #333;
+  text-align: left;
+  max-width: 180px;
+  word-break: break-word;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(-3px);
+  }
+  to {
+    transform: translateY(3px);
+  }
+}

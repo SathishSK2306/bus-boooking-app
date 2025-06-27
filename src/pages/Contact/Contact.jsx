@@ -74,7 +74,7 @@ const Contact = () => {
                 <i className="fas fa-map-marker-alt"></i>
                 <div>
                   <h4>Address</h4>
-                  <p>123 Bus Street, Bloomington, MN 55420</p>
+                  <p>123 Bus Street, Bangalore, PN : 560021</p>
                 </div>
               </div>
 
@@ -90,7 +90,7 @@ const Contact = () => {
                 <i className="fas fa-envelope"></i>
                 <div>
                   <h4>Email</h4>
-                  <p>info@busease.com</p>
+                  <p>info@YesGoBus.com</p>
                 </div>
               </div>
             </div>
@@ -154,10 +154,10 @@ const Contact = () => {
                     onChange={handleChange}
                   >
                     <option value="">Select feedback type</option>
-                    <option value="complaint">Complaint</option>
-                    <option value="suggestion">Suggestion</option>
-                    <option value="praise">Praise</option>
-                    <option value="question">Question</option>
+                    <option value="Average">Average</option>
+                    <option value="Good">Good</option>
+                    <option value="Awesome">Awesome</option>
+                    <option value="Bad">Bad</option>
                   </select>
                 </div>
 

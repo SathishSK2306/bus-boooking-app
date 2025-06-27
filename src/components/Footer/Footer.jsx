@@ -53,13 +53,13 @@ const Footer = () => {
             <ul>
               <li>
                 <i className="fas fa-map-marker-alt"></i> 123 Bus Street,
-                Bloomington
+                Bangalore
               </li>
               <li>
                 <i className="fas fa-phone"></i> +1 234 567 890
               </li>
               <li>
-                <i className="fas fa-envelope"></i> info@busease.com
+                <i className="fas fa-envelope"></i> info@YesGoBus.com
               </li>
             </ul>
           </div>
@@ -77,7 +77,9 @@ const Footer = () => {
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} BusEase. All rights reserved.</p>
+          <p>
+            &copy; {new Date().getFullYear()} YesGoBus. All rights reserved.
+          </p>
           <div className="footer-links">
             <a href="/privacy">Privacy Policy</a>
             <a href="/terms">Terms of Service</a>
