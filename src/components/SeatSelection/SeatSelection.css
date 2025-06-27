@@ -1,0 +1,200 @@
+/* src/components/SeatSelection/SeatSelection.css */
+
+.seats {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 20px;
+  width: 100%;
+  align-items: center;
+}
+
+.seat-legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.seat-label {
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  color: white;
+  font-weight: 500;
+}
+
+.seat-label.available {
+  background-color: #4a5c6a;
+}
+
+.seat-label.selected {
+  background-color: #ccd0cf;
+  color: #06141b;
+}
+
+.seat-label.sold {
+  background-color: #333;
+}
+
+.seat-label.ladies {
+  background-color: #e49ab0;
+  color: #06141b;
+}
+
+.bus-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.seat-row {
+  display: grid;
+  grid-template-columns: repeat(5, 45px);
+  gap: 10px;
+  justify-content: center;
+}
+
+.seat {
+  width: 45px;
+  height: 45px;
+  border-radius: 6px;
+  background-color: #4a5c6a;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.seat:hover {
+  background-color: #9ba8ab;
+}
+
+.seat.selected {
+  background-color: #ccd0cf;
+  color: #06141b;
+  font-weight: bold;
+}
+
+.seat.sold {
+  background-color: #333;
+  cursor: not-allowed;
+}
+
+.seat.ladies {
+  background-color: #e49ab0;
+  color: #06141b;
+}
+
+.aisle {
+  width: 45px;
+  height: 45px;
+  background-color: transparent;
+}
+
+.passenger-details-section,
+.payment-section {
+  max-width: 480px;
+  width: 100%;
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.passenger-details-section h3,
+.payment-section h3 {
+  color: #222;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.passenger-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 8px;
+}
+
+.passenger-form input {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.return-ticket {
+  align-self: flex-start;
+}
+
+.btn-booking,
+.btn-confirm {
+  padding: 12px 20px;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+.btn-booking:hover {
+  background-color: #005ea8;
+}
+
+.btn-confirm {
+  background-color: #28a745;
+}
+
+.btn-confirm:hover {
+  background-color: #218838;
+}
+
+.payment-section input {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.note {
+  font-size: 0.85rem;
+  color: #555;
+  text-align: center;
+  margin-top: -8px;
+}
+
+@media (max-width: 768px) {
+  .seat-row {
+    grid-template-columns: repeat(5, 35px);
+    gap: 8px;
+  }
+
+  .seat,
+  .aisle {
+    width: 35px;
+    height: 35px;
+  }
+
+  .seat-label {
+    font-size: 0.75rem;
+  }
+
+  .passenger-form {
+    flex-direction: column;
+  }
+}

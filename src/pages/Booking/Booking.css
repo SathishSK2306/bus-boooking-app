@@ -1,0 +1,111 @@
+/* .seats {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.seat-legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.seat-label {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  color: white;
+  font-weight: 500;
+}
+
+.seat-label.available {
+  background-color: #4a5c6a;
+}
+
+.seat-label.selected {
+  background-color: #ccd0cf;
+  color: #06141b;
+}
+
+.seat-label.sold {
+  background-color: #333;
+}
+
+.seat-label.ladies {
+  background-color: #e49ab0;
+  color: #06141b;
+}
+
+.bus-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.seat-row {
+  display: grid;
+  grid-template-columns: repeat(5, 45px);
+  gap: 10px;
+  justify-content: center;
+}
+
+.seat {
+  width: 45px;
+  height: 45px;
+  border-radius: 6px;
+  background-color: #4a5c6a;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.seat:hover {
+  background-color: #9ba8ab;
+}
+
+.seat.selected {
+  background-color: #ccd0cf;
+  color: #06141b;
+  font-weight: bold;
+}
+
+.seat.sold {
+  background-color: #333;
+  cursor: not-allowed;
+}
+
+.seat.ladies {
+  background-color: #e49ab0;
+  color: #06141b;
+}
+
+.aisle {
+  width: 45px;
+  height: 45px;
+  background-color: transparent;
+}
+
+@media (max-width: 768px) {
+  .seat-row {
+    grid-template-columns: repeat(5, 35px);
+    gap: 8px;
+  }
+
+  .seat,
+  .aisle {
+    width: 35px;
+    height: 35px;
+  }
+
+  .seat-label {
+    font-size: 0.75rem;
+  }
+} */

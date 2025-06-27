@@ -1,0 +1,6 @@
+/* src/components/BusList/BusList.css */
+.bus-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

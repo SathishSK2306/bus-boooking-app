@@ -1,0 +1,197 @@
+/* src/components/BusCard/BusCard.css */
+.bus-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.bus-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.bus-info {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr 1fr 1fr;
+  gap: 20px;
+  padding: 25px;
+  align-items: center;
+}
+
+.bus-name h3 {
+  color: var(--primary);
+  margin-bottom: 5px;
+}
+
+.operator {
+  font-size: 0.8rem;
+  color: var(--light);
+  font-weight: 500;
+}
+
+.timing {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.departure,
+.arrival {
+  display: flex;
+  flex-direction: column;
+}
+
+.time {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.location {
+  font-size: 0.9rem;
+  color: var(--light);
+}
+
+.duration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.duration-line {
+  width: 100%;
+  height: 2px;
+  background-color: var(--lightest);
+  position: relative;
+  margin: 5px 0;
+}
+
+.duration-line::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--secondary);
+}
+
+.duration-line::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  right: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--secondary);
+}
+
+.duration span {
+  font-size: 0.8rem;
+  color: var(--light);
+}
+
+.price {
+  text-align: center;
+}
+
+.amount {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--secondary);
+  display: block;
+}
+
+.per-person {
+  font-size: 0.8rem;
+  color: var(--light);
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn-details {
+  background-color: transparent;
+  color: var(--secondary);
+  border: 1px solid var(--secondary);
+  padding: 8px 15px;
+}
+
+.btn-details:hover {
+  background-color: var(--lightest);
+}
+
+.bus-details {
+  padding: 0 25px 25px;
+  border-top: 1px solid #eee;
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.amenities h4,
+.seats-info h4 {
+  margin-bottom: 15px;
+  color: var(--primary);
+}
+
+.amenities ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.amenities li {
+  background-color: var(--lightest);
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+.seats-info p {
+  color: var(--light);
+  margin-top: 10px;
+}
+
+@media (max-width: 992px) {
+  .bus-info {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .price,
+  .actions {
+    grid-column: span 2;
+    text-align: center;
+  }
+
+  .actions {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .bus-info {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .price,
+  .actions {
+    grid-column: span 1;
+  }
+
+  .bus-details {
+    grid-template-columns: 1fr;
+  }
+}
